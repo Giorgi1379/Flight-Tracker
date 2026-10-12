@@ -1,14 +1,14 @@
 import psycopg2
-from src.settings import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
+from src.settings import settings
 from src.logger import logger
 
 class DatabaseManager:
     def __init__(self):
-        self.db_name = DB_NAME
-        self.db_user = DB_USER
-        self.db_password = DB_PASSWORD
-        self.db_host = DB_HOST
-        self.db_port = DB_PORT
+        self.db_name = settings.db_name
+        self.db_user = settings.db_user
+        self.db_password = settings.db_password
+        self.db_host = settings.db_host
+        self.db_port = settings.db_port
 
     def get_db_connection(self):
         try:

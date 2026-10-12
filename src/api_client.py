@@ -1,16 +1,18 @@
 import requests
 import pandas as pd
-from src.settings import CLIENT_ID, CLIENT_SECRET, TOKEN_URL, API_URL, PARAMS
+from src.settings import settings
 from src.logger import logger
 
 class OpenSkyAPIClient:
     def __init__(self):
-        self.client_id = CLIENT_ID
-        self.client_secret = CLIENT_SECRET
-        self.token_url = TOKEN_URL
-        self.api_url = API_URL
-        self.params = PARAMS
+        self.client_id = settings.api_username
+        self.client_secret = settings.api_password
+        self.token_url = "https://opensky-network.org/oauth/token"
+        self.api_url = "https://opensky-network.org/api/states/all"
+        self.params = {"lamin": 41.0, "lamax": 43.5, "lomin": 40.0, "lomax": 46.5}
+
         self.access_token = None
+
 
     def get_access_token(self):
         try:
