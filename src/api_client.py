@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
-from settings import CLIENT_ID, CLIENT_SECRET, TOKEN_URL, API_URL, PARAMS
-from logger import logger
+from src.settings import CLIENT_ID, CLIENT_SECRET, TOKEN_URL, API_URL, PARAMS
+from src.logger import logger
 
 class OpenSkyAPIClient:
     def __init__(self):

@@ -1,6 +1,6 @@
 import psycopg2
-from settings import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
-from logger import logger
+from src.settings import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
+from src.logger import logger
 
 class DatabaseManager:
     def __init__(self):

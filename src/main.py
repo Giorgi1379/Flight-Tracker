@@ -1,6 +1,6 @@
-from api_client import OpenSkyAPIClient
-from database import DatabaseManager
-from logger import logger
+from src.api_client import OpenSkyAPIClient
+from src.database import DatabaseManager
+from src.logger import logger
 
 def run_pipeline():
     logger.info("Starting pipeline")
